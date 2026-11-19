@@ -1,0 +1,22 @@
+
+bundle:
+  name: movies_analytics_project
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Unity Catalog name
+    default: workspace
+
+  schema:
+    description: Schema for movies analytics
+    default: movies_dev
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: https://dbc-225c767f-3556.cloud.databricks.com/browse/folders/workspace?o=7474644527853113
